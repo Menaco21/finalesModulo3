@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea M03 C08</title>
+</head>
+<body>
+    <h1>Ingreso de personas</h1>
+    <button onclick="almacenar();">agregar personas</button><br><br>
+    nombre  : <input id="nombre" name="nombre"><br>
+    edad    : <input id="edad" name="edad"><br>
+    profesion: <input id="profesion" name="profesion"><br>
+    <br>
+    <button onclick="correo();">agregar correo</button><br>
+    <br>
+    correo: <input id="correo" name="correo">
+    <p id="mostrar"> </p>   
+    <p id="mostrar2"> </p>      
+
+        <script type="text/javascript">
+        function agregar(nombre,edad,profesion){
+            this.nombre=nombre;
+            this.edad=edad;
+            this.profesion=profesion;
+        }
+        function almacenar(){
+            let guarda= new agregar();
+                guarda.nombre= document.getElementById('nombre').value;
+                guarda.edad= document.getElementById('edad').value;        
+                guarda.profesion=document.getElementById('profesion').value;                
+                let txt=guarda.nombre+"<br>"+guarda.edad+"<br>"+guarda.profesion;
+            document.getElementById('mostrar').innerHTML=txt;
+        }
+        function correo(){
+                let guarda= new agregar();
+                guarda.correo=document.getElementById('correo').value;
+                let txt=guarda.correo;
+            document.getElementById('mostrar2').innerHTML=txt;
+        }       
+ </script>
+</body>
+</html>
